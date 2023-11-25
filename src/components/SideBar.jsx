@@ -6,7 +6,7 @@ const SideBar = () => {
     const [popularBlogs, setPopularBlogs] = useState([]);
 
     useEffect(()=> {
-        fetch("http://localhost:5000/blogs").then(res => res.json()).then(data => setPopularBlogs(data.slice(0,
+        fetch("https://blog-backend-sfxs.onrender.com/blogs").then(res => res.json()).then(data => setPopularBlogs(data.slice(0,
         15)))
     },[])
       return (
